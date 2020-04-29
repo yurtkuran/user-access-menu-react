@@ -4,7 +4,7 @@ const jwt = require('jsonwebtoken');
 const config = require('config');
 const router = express.Router();
 
-// User model
+// database models
 const User = require('../models/User');
 
 // authorization middleware
@@ -24,7 +24,7 @@ router.get('/', auth, async (req, res) => {
         const user = await User.findById(req.user.id).select('-password');
         res.json(user);
     } catch (err) {
-        console.error(err);
+        console.error(err.message);
         res.status(500).send('server error');
     }
 });
