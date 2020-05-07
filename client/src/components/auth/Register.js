@@ -1,7 +1,14 @@
 import React, { Fragment, useState } from 'react';
 import { Link } from 'react-router-dom';
+import PropTypes from 'prop-types';
 
-const Register = () => {
+// bring in redux
+import { connect } from 'react-redux';
+
+// bring in actions
+import { setAlert } from '../../actions/alertActions';
+
+const Register = ({ setAlert }) => {
     // init local state
     const [formData, setFormData] = useState({
         name: '',
@@ -20,11 +27,9 @@ const Register = () => {
     const onSubmit = async (e) => {
         e.preventDefault();
         if (name === '' || email === '' || password === '') {
-            // setAlert('Please enter all fields', 'danger');
-            console.log('fields are required');
+            setAlert('Please enter all fields', 'danger');
         } else if (password !== password2) {
-            // setAlert('Passwords do not match', 'danger');
-            console.log('passowrds do not match');
+            setAlert('Passwords do not match', 'danger');
         } else {
             console.log('success');
             console.log(formData);
@@ -71,4 +76,8 @@ const Register = () => {
     );
 };
 
-export default Register;
+Register.propTypes = {
+    setAlert: PropTypes.func.isRequired,
+};
+
+export default connect(null, { setAlert })(Register);
