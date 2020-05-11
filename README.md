@@ -7,12 +7,12 @@ Original githup repo: https://github.com/bradtraversy/devconnector_2.0
 My original repo: https://github.com/yurtkuran/Dev-Connector
 
 This repo also incorporated:
-~~+ bootstrap navbar with conditional menu items based on user login and admin status
-+ email confirmation wiht nodemailer and  JWT
-+ dotenv to store configuration infomration (ie passwords, keys, etc)
-+ dtabase log when user logs in or out
++ ~~bootstrap navbar with conditional menu items based on user login and admin status
++ ~~email confirmation wiht nodemailer and  JWT
++ ~~dotenv to store configuration infomration (ie passwords, keys, etc)
++ ~~dtabase log when user logs in or out
 + user CRUD
-+ multiple access levels: member & admin
-+ momentjs for time formatting
-+ bootstrap modal pop-up delete confirmation
-+ field validation using express-validator~~
++ ~~multiple access levels: member & admin
++ ~~momentjs for time formatting
++ ~~bootstrap modal pop-up delete confirmation
++ field validation using express-validator
